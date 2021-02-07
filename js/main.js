@@ -17,7 +17,11 @@ const getVoices = () => {
     
     // Loop through voices and create an option for each one
     voices.forEach(voice => {
-
+        //Create option element
+        const option = document.createElement
+        ('option');
+        //Fill option with voice and language
+        option.textContent = voice.name + ''
     });
 }; 
 
