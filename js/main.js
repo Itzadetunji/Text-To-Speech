@@ -7,4 +7,6 @@ const voiceSelect = document.querySelector('#voice-select');
 const rate = document.querySelector('#rate');
 const rateValue = document.querySelector('#rate-value');
 const pitch = document.querySelector('#pitch');
-const pitchValue = document.querySelector('#pitch-value');nnnnn
+const pitchValue = document.querySelector('#pitch-value');
+
+//
