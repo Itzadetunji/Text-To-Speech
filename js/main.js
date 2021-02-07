@@ -45,10 +45,15 @@ const speak = () => {
     }
     if(textInput.value !== ''){
         //Get speak text
-        constspeakText = new SpeechSynthesisUtterance(textInput.value);
+        const speakText = new SpeechSynthesisUtterance(textInput.value);
         //SPeak end
-        speakText.oonend = e => {
-            
+        speakText.onend = e => {
+            console.log('Done speaking...');
+        }
+
+        //Speak error 
+        speakText.onerror = e => {
+            console.error('Something went wrong');
         }
     }
 }
