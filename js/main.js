@@ -43,4 +43,12 @@ const speak = () => {
         console.error('Already speaking..');
         return;
     }
+    if(textInput.value !== ''){
+        //Get speak text
+        constspeakText = new SpeechSynthesisUtterance(textInput.value);
+        //SPeak end
+        speakText.oonend = e => {
+            
+        }
+    }
 }
