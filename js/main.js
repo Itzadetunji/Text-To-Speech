@@ -38,5 +38,9 @@ if(synth.onvoiceschanged !== undefined){
 //Speak
 
 const speak = () => {
-    
+    //Check if speaking
+    if(synth.speaking) {
+        console.error('Already speaking..');
+        return;
+    }
 }
