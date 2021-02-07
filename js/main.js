@@ -13,5 +13,8 @@ const pitchValue = document.querySelector('#pitch-value');
 let voices = [];
 
 const getoices =() => {
-    voices = synth
-}
+    voices = synth.getVoices ();
+    console.log(voices);
+} 
+
+getVoices();
