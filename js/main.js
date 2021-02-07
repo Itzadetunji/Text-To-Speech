@@ -61,6 +61,11 @@ const speak = () => {
         const selectedVoice = voiceSelect.selectedOptions[0]
         .getAttribute('data-name');
 
-        
+        //Loop through voices
+        voices.forEach(voice => {
+            if (voicename === selectedVoice) {
+                speakText.voice = voice;
+            }
+        });
     }
 }
