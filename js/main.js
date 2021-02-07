@@ -9,4 +9,4 @@ const rateValue = document.querySelector('#rate-value');
 const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
 
-//
+// Init voices array
