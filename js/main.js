@@ -25,7 +25,7 @@ const getVoices = () => {
 
         //Set needed option attributes
         option.setAttribute('data-lang', voice.lang);
-        option.setAttribute('data-lang', voice.name);
+        option.setAttribute('data-name', voice.name);
         voiceSelect.appendChild(option);
     });
 }; 
@@ -36,7 +36,6 @@ if(synth.onvoiceschanged !== undefined){
 }
 
 //Speak
-
 const speak = () => {
     //Check if speaking
     if(synth.speaking) {
@@ -63,7 +62,7 @@ const speak = () => {
 
         //Loop through voices
         voices.forEach(voice => {
-            if (voicename === selectedVoice) {
+            if (voice.name === selectedVoice) {
                 speakText.voice = voice;
             }
         });
@@ -79,7 +78,7 @@ const speak = () => {
 // Event Listeners
 
 //Text Form Submit
-textForm.addEventListener('submit', e=> {
+textForm.addEventListener('submit', e => {
     e.preventDefault();
     speak();
     textInput.blur();
