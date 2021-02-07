@@ -75,3 +75,14 @@ const speak = () => {
         synth.speak(speakText);
     }
 };
+
+// Event Listeners
+
+//Text Form Submit
+textForm.addEventListener('submit', e=> {
+    e.preventDefault();
+    speak();
+    textInput.blur();
+});
+
+//
