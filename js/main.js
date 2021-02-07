@@ -10,3 +10,8 @@ const pitch = document.querySelector('#pitch');
 const pitchValue = document.querySelector('#pitch-value');
 
 // Init voices array
+let voices = [];
+
+const getoices =() => {
+    voices = synth
+}
