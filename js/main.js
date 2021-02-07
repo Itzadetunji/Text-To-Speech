@@ -21,7 +21,12 @@ const getVoices = () => {
         const option = document.createElement
         ('option');
         //Fill option with voice and language
-        option.textContent = voice.name + ''
+        option.textContent = voice.name + '('+ voice.lang +')';
+
+        //Set needed option attributes
+        option.setAttribute('data-lang', voice.lang);
+        option.setAttribute('data-lang', voice.name);
+        voiceSelect.appendChild(option);
     });
 }; 
 
