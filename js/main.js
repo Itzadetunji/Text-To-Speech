@@ -46,7 +46,8 @@ const speak = () => {
     if(textInput.value !== ''){
         //Get speak text
         const speakText = new SpeechSynthesisUtterance(textInput.value);
-        //SPeak end
+        
+        //Speak end
         speakText.onend = e => {
             console.log('Done speaking...');
         }
@@ -55,5 +56,11 @@ const speak = () => {
         speakText.onerror = e => {
             console.error('Something went wrong');
         }
+
+        //Selected voice 
+        const selectedVoice = voiceSelect.selectedOptions[0]
+        .getAttribute('data-name');
+
+        
     }
 }
